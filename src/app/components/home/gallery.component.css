@@ -1,0 +1,21 @@
+.h500 {
+  height: 300px;
+}
+
+.h300 {
+  height: 200px;
+}
+
+.gallery {
+  border: black inset 4px;
+}
+
+hr.new {
+	height: 6px;
+	background: url(http://ibrahimjabbari.com/english/images/hr-12.png) repeat-x 0 0;
+    border: 0;
+}
+
+/*  ${sanitizeImage( data.results[0].backdrop_path  | showImage:500:'backdrop' )} */
+
+
