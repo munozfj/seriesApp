@@ -29,19 +29,19 @@ export class ListComponent implements OnInit {
 
     switch ( this.criteria)  {
       case  'top':
-      this.ss.getSeries(  1,
+      this.ss.getSeries(  this.page,
         'popularity.desc'      ).subscribe( data => this.series = data );
         break;
 
         case  'year':
-        this.ss.getSeries(  1,
+        this.ss.getSeries(  this.page,
           'popularity.desc',
           Util.formattedDate(this.year),
           Util.formattedDate(this.today) ).subscribe( data => this.series = data );
         break;
 
         case  'upcoming':
-      this.ss.getSeries( 1,
+      this.ss.getSeries( this.page,
         'first_air_date.asc',
         Util.formattedDate(  this.today)
                                   ).subscribe( data => this.series = data );
@@ -55,7 +55,7 @@ export class ListComponent implements OnInit {
   }
 
   onClick(page: string) {
-    this.route.navigate(['/list/' + page]);
+    this.route.navigate(['/list/' , this.criteria , page]);
     window.location.reload();
   }
 
