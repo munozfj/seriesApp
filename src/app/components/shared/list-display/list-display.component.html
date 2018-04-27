@@ -4,7 +4,7 @@
       <img class="img-fluid pointer" routerLink="/show/{{ serie.id }}" src="{{ serie.poster_path | showImage:185:'poster' }}" alt="{{serie.original_name}}"
         title="{{serie.original_name}}">
     </figure>
-    <div class="cold-12 col-md-8 ">
+    <div class="cold-12 col-md-9 ">
       <h2 class="text-center pointer" routerLink="/show/{{ serie.id }}">{{serie.original_name}}</h2>
       <p>
         <span class="font-weight-bold font-italic">Primera emisión:</span> {{ serie.first_air_date  }}</p>
@@ -19,7 +19,7 @@
         <span class=" badge badge-warning">{{ serie.vote_count}} </span>
         <p>
           <span class="font-weight-bold font-italic">Sinopsis:</span> {{ serie.overview | slice:0:120}} </p>
-        <button routerLink="/show/{{ serie.id }}" class="btn btn-outline-success">Ver más ...</button>
+        <button [routerLink]="['/show',serie.id]" class="btn btn-success">Saber más ...</button>
     </div>
   </div>
 </div>
