@@ -16,6 +16,7 @@ import { ListComponent } from './components/list/list.component';
 import { GalleryComponent } from './components/home/gallery.component';
 import { LittleInfoComponent } from './components/home/little-info.component';
 import { ShowComponent } from './components/show/show.component';
+import { ListDisplayComponent } from './components/shared/list-display/list-display.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ShowComponent } from './components/show/show.component';
     ListComponent,
     GalleryComponent,
     LittleInfoComponent,
-    ShowComponent
+    ShowComponent,
+    ListDisplayComponent
   ],
   imports: [
     BrowserModule,
